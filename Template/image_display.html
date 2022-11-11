@@ -1,0 +1,24 @@
+{% extends 'index.html' %} {% load static %} {% block content %}
+
+<div class="row">
+  {% for img in images %}
+   <div class="col-sm-4">
+    <div class="card m-2">
+      <h5>Original Image</h5>
+      {% comment %} {{img.image.url}} {% endcomment %}
+      <img src="{{img.image.url}}" class="card-img-top rounded" height = '350px' alt="Coming soon" />
+    </div>
+  </div>
+  {% endfor %}
+  {% for img in cimage %}
+   <div class="col-sm-4">
+    <div class="card m-2">
+      <h5>Compressed Image</h5>
+      {% comment %} {{img.image.url}} {% endcomment %}
+      <img src="{{img.image.url}}" class="card-img-top rounded" height = '350px' alt="Coming soon" />
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+{% endblock %}
